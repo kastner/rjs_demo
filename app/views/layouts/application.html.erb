@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>RJS Demo</title>
+  <%= javascript_include_tag :all, :cache => true %>
+  <style type="text/css" media="screen">
+    body {
+      font: 100% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+      background: #aaa;
+    }
+    #page {
+      width: 43.750em; /* 700.0px at 16px base */
+      padding: 0.625em; /* 10.0px at 16px base */
+      margin: 0 auto;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      background: white;
+    }
+    h1 { margin-top: 0; text-align: center; }
+    
+    .box {
+      float: left;
+      border: 1px solid #999;
+      height: 10em;
+      width: 10em;
+      text-align: center;
+      display: block;
+      margin: 0.4em 0.4em;
+      background: #ddd;
+      line-height: 7em;
+    }
+    
+    li.empty {
+      color: #aaa;
+    }
+    
+    #seats {
+      overflow: auto;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  </style>
+</head>
+<body id="home">
+  <div id="page">
+    <%= yield %>
+  </div>
+</body>
+</html>

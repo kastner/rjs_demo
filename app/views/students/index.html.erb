@@ -1,0 +1,17 @@
+<h1>Students</h1>
+
+<ul id="seats">
+  <% (1..8).each do |i| %>
+    <% if student = @students.find { |s| s.seat == i } %>
+      <li class="box" id="student_<%= student.id %>">
+        <%= h student.name %>
+      </li>
+    <% else %>
+      <li class="box empty">
+        <em>EMPTY</em>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= sortable_element :seats, :url => { :action => "reorder" }, :constraint => false %>
