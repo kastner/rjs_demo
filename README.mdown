@@ -1,0 +1,4 @@
+RJS Demo for Advancing with Rails
+=================================
+
+This was a short demo done live in class to show the basics of the RJS request cycle and Scriptaculous helpers
